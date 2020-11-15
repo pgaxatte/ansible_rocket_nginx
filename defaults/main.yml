@@ -1,0 +1,3 @@
+---
+upstream_group_name: chat_servers
+upstream_port: 3000

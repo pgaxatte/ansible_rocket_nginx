@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author:
+    - Pierre Gaxatte
+  description: Deploy nginx for Rocket.Chat
+  license: MIT
+  min_ansible_version: 2.10.0
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+  galaxy_tags:
+    - cloud
+    - networking
+dependencies: []

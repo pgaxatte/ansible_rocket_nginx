@@ -1,0 +1,15 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        server_name _;
+
+        location / {
+            proxy_pass http://frontends;
+        }
+}
+
+upstream frontends {
+{% for server in groups[upstream_group_name] | map('extract', hostvars, ['ansible_host']) %}
+    server {{ server }}:{{ upstream_port }};
+{% endfor %}
+}
